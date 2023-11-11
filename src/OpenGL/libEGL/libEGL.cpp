@@ -826,6 +826,8 @@ EGLContext CreateContext(EGLDisplay dpy, EGLConfig config, EGLContext share_cont
 				case EGL_LOSE_CONTEXT_ON_RESET_KHR:
 					// These bits are for OpenGL contexts only, not OpenGL ES contexts
 					return error(EGL_BAD_ATTRIBUTE, EGL_NO_CONTEXT);
+				case EGL_CONTEXT_PRIORITY_LEVEL_IMG:
+					break;
 				default:
 					return error(EGL_BAD_ATTRIBUTE, EGL_NO_CONTEXT);
 				}
